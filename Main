@@ -1,0 +1,42 @@
+package javalucky;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("input ur ticket (4 numbers)");
+		int ticket = sc.nextInt();
+		int a = ticket / 100;
+		int b = ticket % 100;
+		int i = a / 10;
+		int j = a % 10;
+		int s = b / 10;
+		int c = b % 10;
+		if ((sum1(i, j)) == (sum2(s, c))) {
+			System.out.println("you are extra lucky 0o0");
+		}
+		else if (i + j == s + c) {
+			System.out.println("you are lucky one :D");
+		} else {
+			System.out.println("unluko :(");
+		}
+	}
+
+	public static int sum1(int i, int j) {
+		int sum = i + j;
+		int a = sum / 10;
+		int b = sum % 10;
+		int secondsum1 = a + b;
+		return secondsum1;
+	}
+
+	public static int sum2(int s, int c) {
+		int sum = s + c;
+		int a = sum / 10;
+		int b = sum % 10;
+		int secondsum2 = a + b;
+		return secondsum2;
+	}
+}
